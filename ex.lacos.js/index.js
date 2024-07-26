@@ -1,0 +1,34 @@
+// Exercício 1: Soma de Números
+// Escreva um programa que peça ao usuário para digitar um número positivo n e, em seguida, some todos os números de 1 até n. Exiba o resultado no console.
+
+/*let number1 = parseInt(prompt('Digite um número positivo')); // Entrada do usuário
+let sum = 0; // Variável para acumular a soma
+let counter = 1; // Variável de controle do laço
+
+while (counter <= number1) {
+    sum += counter; // Adiciona o valor atual de counter à soma
+    counter++; // Incrementa o contador
+}
+
+/**
+ conter 1 -> 2 -> 3 -> 4 -> 5
+ sun    1 -> 3 -> 6 -> 10 -> 15
+
+ */
+//console.log(`A soma de todos os números de 1 até ${number1} é: ${sum}`);
+
+
+
+
+/**
+ Exercício 2: Números Pares de 1 a 50
+Escreva um programa que imprima todos os números pares de 1 a 50.
+ */
+
+
+for(let a = 0 ; a <= 50; a++){
+   if(a % 2 === 0){
+    console.log(a)
+   }
+}
+//0 - 2 - 4
