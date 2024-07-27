@@ -26,9 +26,45 @@ Escreva um programa que imprima todos os números pares de 1 a 50.
  */
 
 
-for(let a = 0 ; a <= 50; a++){
+/*for(let a = 0 ; a <= 50; a++){
    if(a % 2 === 0){
     console.log(a)
    }
 }
-//0 - 2 - 4
+0 - 2 - 4
+*/
+
+/*let n2 = 1
+function  tabuada(n1){
+    while(n2 <= 10){
+        resultado = n1 * n2
+        console.log(`${n1} x ${n2} = ${resultado}`)
+        n2++
+    }
+}
+tabuada(2)
+*/
+
+function numeroPrimos(numero) {
+    let araynum = [];
+  
+    for (let numeroAtual = 2; numeroAtual <= numero; numeroAtual++) {
+      let numeroprimo = true;
+  
+      for (let numerodivisor = 2; numerodivisor <= (numeroAtual); numerodivisor++) {
+        if (numeroAtual % numerodivisor === 0 && numerodivisor !== numeroAtual) {
+          numeroprimo = false;
+          break; // Não precisa verificar mais divisores
+        }
+      }
+  
+      if (numeroprimo) {
+        araynum.push(numeroAtual);
+      }
+    }
+  
+    return araynum; // Mover o return para fora do laço externo
+  }
+  
+  console.log(numeroPrimos(10));
+  
