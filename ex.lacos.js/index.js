@@ -45,7 +45,7 @@ function  tabuada(n1){
 tabuada(2)
 */
 
-function numeroPrimos(numero) {
+/*function numeroPrimos(numero) {
     let araynum = [];
   
     for (let numeroAtual = 2; numeroAtual <= numero; numeroAtual++) {
@@ -67,4 +67,36 @@ function numeroPrimos(numero) {
   }
   
   console.log(numeroPrimos(10));
-  
+  */
+
+  /**
+   * Desenvolver uma função em JavaScript que encontre todos os números primos em um intervalo específico e armazene esses números em um array.
+   */
+
+  function numerosPrimos(numero){
+    let arayNumero = [];
+    for(let numeroAtual = 2; numeroAtual <= numero; numeroAtual++){
+      let ehprimo = true 
+      for(numerodivisor = 2; numerodivisor <=  numeroAtual; numerodivisor++){
+
+        if(numeroAtual % numerodivisor === 0 && numerodivisor !== numeroAtual){
+          ehprimo = false
+          break;
+        }
+      }
+      if(ehprimo){
+        arayNumero.push(numeroAtual)
+      }
+    }
+    return arayNumero;
+  }
+  console.log(numerosPrimos(10))
+ 
+  /**
+   * Resumo
+Para cada valor de numeroAtual, a variável ehprimo é inicialmente true.
+O loop interno verifica todos os divisores de 2 até numeroAtual.
+Se numeroAtual for divisível por algum numerodivisor que não seja ele mesmo, ehprimo é definido como false.
+Após o loop interno, se ehprimo ainda for true, numeroAtual é adicionado ao array arayNumero.
+O processo se repete para cada número de 2 até numero.
+   */
